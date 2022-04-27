@@ -1,8 +1,8 @@
 :root {
-  --white-piece: #fff;
+  --white-piece: rgb(255, 255, 255);
   --black-piece: #000;
-  --white-board: #c8b395;
-  --black-board: #66443a;
+  --white-board: #fcca9d;
+  --black-board: #90491e;
 }
 * {
   margin: 0;
@@ -15,8 +15,6 @@
   margin: 1rem auto;
   width: 700px;
   /* height: 92vh; */
-  opacity: 0.5;
-  background-color: rgb(177, 100, 100);
 }
 
 ul {
@@ -60,11 +58,14 @@ ul li {
   justify-content: center;
   cursor: pointer;
   z-index: 2;
-  pointer-events: painted;
 }
 .p_white {
   color: var(--white-piece);
 }
 .p_black {
   color: var(--black-piece);
+}
+.active {
+  transition: all 0.2s;
+  background-color: green;
 }
