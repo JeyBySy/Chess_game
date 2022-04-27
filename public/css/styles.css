@@ -1,8 +1,8 @@
 :root {
-  --white-piece: rgb(255, 255, 255);
-  --black-piece: #000;
-  --white-board: #fcca9d;
-  --black-board: #90491e;
+  --white-piece: #d29453;
+  --black-piece: #351a0a;
+  --white-board: #f9d9b1;
+  --black-board: #783c23;
 }
 * {
   margin: 0;
@@ -12,8 +12,10 @@
 }
 
 #Board {
-  margin: 1rem auto;
+  margin: 0.1rem auto;
   width: 700px;
+  border: 20px solid #612912;
+  border-radius: 5px;
   /* height: 92vh; */
 }
 
@@ -32,10 +34,14 @@ ul li {
   z-index: 0;
 }
 .white {
-  background-color: var(--white-board);
+  z-index: 0;
+  /* background-color: var(--white-board); */
+  background-image: linear-gradient(45deg, var(--white-board), white);
 }
 .black {
+  z-index: 0;
   background-color: var(--black-board);
+  /* background-image: linear-gradient(45deg, var(--black-board), green); */
 }
 .text,
 .num {
@@ -67,5 +73,5 @@ ul li {
 }
 .active {
   transition: all 0.2s;
-  background-color: green;
+  background-color: #d0d16a;
 }
