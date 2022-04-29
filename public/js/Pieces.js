@@ -84,11 +84,21 @@ function buildPiece(id, x, y) {
 
 function pick(event) {
     const allPiece = document.getElementsByClassName('pieces')
+
+    const choice = ['capture', 'drop']
+    var audio
+    const random = Math.floor(Math.random() * 2)
+    audio = new Audio(`/public/assets/${choice[random]}.wav`);
+
     for (let i = 0; i < allPiece.length; i++) {
+        if (allPiece[31].classList.contains('active')) {
+            allPiece[i].classList.remove('active')
+        }
         if (allPiece[i].classList.contains('active')) {
             allPiece[i].classList.remove('active')
         } else {
             event.target.classList.add('active')
+            audio.play();
         }
     }
 }
