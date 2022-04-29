@@ -88,7 +88,7 @@ function pick(event) {
     const choice = ['capture', 'drop']
     var audio
     const random = Math.floor(Math.random() * 2)
-    audio = new Audio(`/${choice[random]}.wav`);
+    audio = new Audio(`${choice[random]}.wav`);
 
     for (let i = 0; i < allPiece.length; i++) {
         if (allPiece[31].classList.contains('active')) {
